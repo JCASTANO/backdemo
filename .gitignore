@@ -27,4 +27,6 @@ build
 bin/
 logs
 gradle/
+maven
+target
 
