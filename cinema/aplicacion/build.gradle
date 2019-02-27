@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+group = 'com.demo.cinema'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.springframework:spring-tx:5.1.4.RELEASE'
+	compile 'org.springframework:spring-context:5.1.4.RELEASE'
+	compile project(":dominio")
+	//compile project(":infraestructura")
+	
+	// implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// implementation 'org.springframework.boot:spring-boot-starter-security'
+	//implementation(
+		// project(":dominio"),
+		// project(":infraestructura"),
+		//'org.springframework.boot:spring-boot-starter-web'
+	//)
+	
+	// testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// testImplementation 'org.springframework.security:spring-security-test'
+	// testImplementation 'org.mockito:mockito-core:2.7.22'
+	
+	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	
+	// compileOnly "org.projectlombok:lombok:2.0"
+    // testCompileOnly "org.projectlombok:lombok:2.0"
+    
+	// compile("com.h2database:h2")
+}
+
