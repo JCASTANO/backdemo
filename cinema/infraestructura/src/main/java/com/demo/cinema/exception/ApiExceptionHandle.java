@@ -24,4 +24,9 @@ public class ApiExceptionHandle {
 	public final ResponseEntity<Object> handlerGenericException( final CinemaException exception, final WebRequest request ) {
 		return new ResponseEntity<>( exception.getMessage(), HttpStatus.NOT_ACCEPTABLE); 
 	}
+	
+	@ExceptionHandler(Exception.class)
+	public final ResponseEntity<Object> handlerGenericException( final Exception exception, final WebRequest request ) {
+		return new ResponseEntity<>( "Ocurrió un error interno", HttpStatus.INTERNAL_SERVER_ERROR); 
+	}
 }

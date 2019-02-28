@@ -10,12 +10,6 @@ public class PeliculaCommand {
 	private Date fechaEstreno;
 	private String genero;
 
-	public PeliculaCommand(String titulo, Date fechaEstreno, String genero) {
-		this.titulo = titulo;
-		this.fechaEstreno = fechaEstreno;
-		this.genero = genero;
-	}
-
 	public String getTitulo() {
 		return titulo;
 	}
