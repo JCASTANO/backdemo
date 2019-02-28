@@ -1,7 +1,7 @@
 
-package com.demo.cinema.pelicula;
+package com.demo.cinema.command;
 
-import java.sql.Date;
+import java.util.Date;
 
 
 public class PeliculaCommand {
@@ -10,8 +10,6 @@ public class PeliculaCommand {
 	private String titulo;
 	private Date fechaEstreno;
 	private String genero;
-
-
 
 	public PeliculaCommand(String id, String titulo, Date fechaEstreno, String genero) {
 		this.id = id;

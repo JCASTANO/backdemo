@@ -13,16 +13,15 @@ import com.demo.cinema.entity.Pelicula;
 @Component
 public final class PeliculaMapper {
 
-	public Collection<Pelicula> toPelicula(Iterable<EntityPelicula> listaEntidad) {
+	public Collection<Pelicula> mapDomain(Iterable<EntityPelicula> listaEntidad) {
 		
 		List<Pelicula> listaPelicula = new ArrayList<>();
 		
 		listaEntidad.forEach(peliculaEntity -> {
-			Pelicula pelicula = new Pelicula();
-			pelicula.setId(((EntityPelicula)peliculaEntity).getId());
-			pelicula.setTitulo(((EntityPelicula)peliculaEntity).getTitulo());
-			pelicula.setGenero(((EntityPelicula)peliculaEntity).getGenero());
-			pelicula.setFechaEstreno(((EntityPelicula)peliculaEntity).getFechaEstreno());
+			Pelicula pelicula = new Pelicula(peliculaEntity.getId(), 
+											 peliculaEntity.getTitulo(), 
+											 peliculaEntity.getFechaEstreno(), 
+											 peliculaEntity.getGenero());
 			
 			listaPelicula.add(pelicula);
 		});

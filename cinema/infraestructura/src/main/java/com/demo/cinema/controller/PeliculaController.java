@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.demo.cinema.entity.Pelicula;
-import com.demo.cinema.pelicula.SelectAllPeliculaQueryHandle;
+import com.demo.cinema.query.SelectAllPeliculaQueryHandle;
 
 /**
  * 
@@ -21,16 +21,16 @@ import com.demo.cinema.pelicula.SelectAllPeliculaQueryHandle;
  */
 @RestControllerAdvice
 @RestController
-@RequestMapping(value="/pelicula")
+@RequestMapping(value="/peliculas")
 @CrossOrigin("*")
 public class PeliculaController {
 
 	@Autowired
 	private SelectAllPeliculaQueryHandle queryHandler;
     
-	@RequestMapping(value="/listar", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<Collection<Pelicula>> obtenerTipoVehiculos() {
-		return new ResponseEntity<>( queryHandler.handle(null) , HttpStatus.ACCEPTED);
+		return new ResponseEntity<>( queryHandler.handle() , HttpStatus.ACCEPTED);
 	}	
 
 }

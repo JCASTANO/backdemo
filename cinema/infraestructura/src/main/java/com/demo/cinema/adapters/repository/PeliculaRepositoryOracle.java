@@ -20,7 +20,7 @@ public class PeliculaRepositoryOracle implements PeliculaRepository {
 
 	@Override
 	public Collection<Pelicula> findAll() {
-		return this.peliculaMapper.toPelicula(peliculaRepositoryData.findAll());
+		return this.peliculaMapper.mapDomain(peliculaRepositoryData.findAll());
 	}
 
 }
