@@ -18,7 +18,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  *
  */
 @SpringBootApplication(exclude= {SecurityAutoConfiguration.class, ElasticsearchDataAutoConfiguration.class})
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 public class CinemaApplication extends SpringBootServletInitializer {
 	
 	@Override
