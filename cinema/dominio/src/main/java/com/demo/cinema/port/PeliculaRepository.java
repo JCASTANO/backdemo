@@ -1,5 +1,9 @@
 package com.demo.cinema.port;
 
+import java.util.Collection;
+
+import com.demo.cinema.entity.Pelicula;
+
 /**
  * repository de Pelicula Model
  * 
@@ -8,6 +12,6 @@ package com.demo.cinema.port;
  */
 public interface PeliculaRepository {
 
-	Iterable<?> findAll();
+	Collection<Pelicula> findAll();
 
 }

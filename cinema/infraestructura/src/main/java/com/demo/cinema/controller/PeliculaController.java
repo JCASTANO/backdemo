@@ -1,4 +1,4 @@
-package com.demo.cinema.pelicula.controller;
+package com.demo.cinema.controller;
 
 import java.util.Collection;
 
@@ -23,12 +23,11 @@ import com.demo.cinema.pelicula.SelectAllPeliculaQueryHandle;
 @RestController
 @RequestMapping(value="/pelicula")
 @CrossOrigin("*")
-public class SelectAllPeliculasController {
+public class PeliculaController {
 
 	@Autowired
 	private SelectAllPeliculaQueryHandle queryHandler;
     
-	// TODO: mirar el tema de los verbos - peliculas (listar) :
 	@RequestMapping(value="/listar", method = RequestMethod.GET)
 	public ResponseEntity<Collection<Pelicula>> obtenerTipoVehiculos() {
 		return new ResponseEntity<>( queryHandler.handle(null) , HttpStatus.ACCEPTED);

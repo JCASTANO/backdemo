@@ -1,4 +1,4 @@
-package com.frugalis.ZuulProxy;
+package com.demo.seguridad;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

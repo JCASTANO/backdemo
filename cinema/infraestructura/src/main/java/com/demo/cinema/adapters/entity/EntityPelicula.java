@@ -1,4 +1,4 @@
-package com.demo.cinema.entity;
+package com.demo.cinema.adapters.entity;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -11,13 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-/**
- * The persistent class for the tarifa database table.
- * 
- */
 @Entity
 @Table(name="Pelicula")
-public class ModelPelicula implements Serializable {
+public class EntityPelicula implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id

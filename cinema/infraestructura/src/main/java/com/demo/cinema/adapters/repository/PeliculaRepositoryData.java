@@ -1,9 +1,9 @@
-package com.demo.cinema.repository;
+package com.demo.cinema.adapters.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.demo.cinema.entity.ModelPelicula;
+import com.demo.cinema.adapters.entity.EntityPelicula;
 
 
 /**
@@ -13,6 +13,6 @@ import com.demo.cinema.entity.ModelPelicula;
  *
  */
 @Repository
-public interface PeliculaRepositoryData extends CrudRepository<ModelPelicula, Integer> {
+public interface PeliculaRepositoryData extends CrudRepository<EntityPelicula, Integer> {
 
 }

@@ -1,4 +1,4 @@
-package com.frugalis.ZuulProxy;
+package com.demo.seguridad;
 
 
 
