@@ -6,24 +6,14 @@ import java.util.Date;
 
 public class PeliculaCommand {
 
-	private String id;
 	private String titulo;
 	private Date fechaEstreno;
 	private String genero;
 
-	public PeliculaCommand(String id, String titulo, Date fechaEstreno, String genero) {
-		this.id = id;
+	public PeliculaCommand(String titulo, Date fechaEstreno, String genero) {
 		this.titulo = titulo;
 		this.fechaEstreno = fechaEstreno;
 		this.genero = genero;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	public String getTitulo() {

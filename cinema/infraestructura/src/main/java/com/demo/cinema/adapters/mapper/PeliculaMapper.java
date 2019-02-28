@@ -1,5 +1,6 @@
 package com.demo.cinema.adapters.mapper;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -27,6 +28,15 @@ public final class PeliculaMapper {
 		});
 		
 		return listaPelicula;
+	}
+	
+	public EntityPelicula mapEntity(Pelicula pelicula) {
+		
+		EntityPelicula entityPelicula = new EntityPelicula();
+		entityPelicula.setFechaEstreno(new Timestamp(pelicula.getFechaEstreno().getTime()));
+		entityPelicula.setGenero(pelicula.getGenero());
+		entityPelicula.setTitulo(pelicula.getTitulo());
+		return entityPelicula;
 	}
 
 }

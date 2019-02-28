@@ -22,6 +22,6 @@ public class ApiExceptionHandle {
 	 */
 	@ExceptionHandler(CinemaException.class)
 	public final ResponseEntity<Object> handlerGenericException( final CinemaException exception, final WebRequest request ) {
-		return new ResponseEntity<>( exception.getDetalleError(), HttpStatus.NOT_ACCEPTABLE); 
+		return new ResponseEntity<>( exception.getMessage(), HttpStatus.NOT_ACCEPTABLE); 
 	}
 }

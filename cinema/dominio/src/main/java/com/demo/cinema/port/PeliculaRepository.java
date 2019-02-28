@@ -14,4 +14,5 @@ public interface PeliculaRepository {
 
 	Collection<Pelicula> findAll();
 
+	void save(Pelicula pelicula);
 }

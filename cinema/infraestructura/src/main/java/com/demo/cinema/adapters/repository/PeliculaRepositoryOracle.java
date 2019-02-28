@@ -23,4 +23,8 @@ public class PeliculaRepositoryOracle implements PeliculaRepository {
 		return this.peliculaMapper.mapDomain(peliculaRepositoryData.findAll());
 	}
 
+	@Override
+	public void save(Pelicula pelicula) {
+		this.peliculaRepositoryData.save(this.peliculaMapper.mapEntity(pelicula));
+	}
 }

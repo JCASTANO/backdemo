@@ -15,6 +15,12 @@ public class Pelicula{
 		this.fechaEstreno = fechaEstreno;
 		this.genero = genero;
 	}
+	
+	public Pelicula(String titulo, Date fechaEstreno, String genero) {
+		this.titulo = titulo;
+		this.fechaEstreno = fechaEstreno;
+		this.genero = genero;
+	}
 
 	public Integer getId() {
 		return id;
