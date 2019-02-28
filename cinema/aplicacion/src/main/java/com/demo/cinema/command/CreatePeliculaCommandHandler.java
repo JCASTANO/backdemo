@@ -13,6 +13,6 @@ public class CreatePeliculaCommandHandler {
 	private PeliculaRepository repository;
 	
 	public void handler(PeliculaCommand peliculaCommand) {
-		this.repository.save(new Pelicula(peliculaCommand.getTitulo(), peliculaCommand.getFechaEstreno(), peliculaCommand.getGenero()));
+		this.repository.save(new Pelicula(peliculaCommand.getTitulo(), peliculaCommand.getGenero()));
 	}
 }

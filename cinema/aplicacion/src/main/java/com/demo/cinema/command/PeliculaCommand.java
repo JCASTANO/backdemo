@@ -1,13 +1,9 @@
 
 package com.demo.cinema.command;
 
-import java.util.Date;
-
-
 public class PeliculaCommand {
 
 	private String titulo;
-	private Date fechaEstreno;
 	private String genero;
 
 	public String getTitulo() {
@@ -16,14 +12,6 @@ public class PeliculaCommand {
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
-	}
-
-	public Date getFechaEstreno() {
-		return fechaEstreno;
-	}
-
-	public void setFechaEstreno(Date fechaEstreno) {
-		this.fechaEstreno = fechaEstreno;
 	}
 
 	public String getGenero() {

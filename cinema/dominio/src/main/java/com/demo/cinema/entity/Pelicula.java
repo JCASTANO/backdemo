@@ -16,9 +16,10 @@ public class Pelicula{
 		this.genero = genero;
 	}
 	
-	public Pelicula(String titulo, Date fechaEstreno, String genero) {
+	public Pelicula(String titulo, String genero) {
+		ArgumentValidator.validateRequired(titulo, "El titulo es obligatorio.");
+		ArgumentValidator.validateRequired(genero, "El genero es obligatorio.");
 		this.titulo = titulo;
-		this.fechaEstreno = fechaEstreno;
 		this.genero = genero;
 	}
 
