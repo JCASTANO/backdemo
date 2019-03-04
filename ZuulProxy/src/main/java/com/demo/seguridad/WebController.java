@@ -1,32 +1,42 @@
 package com.demo.seguridad;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.oauth2.provider.token.ConsumerTokenServices;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@CrossOrigin("*")
 public class WebController {
-
-	@RequestMapping({"/","index"})
-	public String inicio() {
-		return "index";
+	
+	@Autowired 
+	ConsumerTokenServices tokenServices;
+	
+	@RequestMapping("/publica")
+	public String publico() {
+		return "Pagina Publica";
 	}
-
-	@RequestMapping("/webprivado")
-	public String privado() {
-		return "privado";
+	@RequestMapping("/privada")
+	public String privada() {
+		return "Pagina Privada";
 	}
-	@RequestMapping("/webpublico")
-	public String loginpub() {
-		return "publico";
-	}
-	@RequestMapping("/webadmin")
+	@RequestMapping("/admin")
 	public String admin() {
-		return "admin";
+		return "Pagina Administrador";
 	}
-	@RequestMapping("/login")
-	public String login() {
-		return "login";
+	
+	@DeleteMapping("/revoke-token")
+	@ResponseBody
+	public void revocarToken(HttpServletRequest request){
+		
+		String authorization = request.getHeader("Authorization");
+		if (authorization != null && authorization.contains("Bearer")) {
+			String tokenId = authorization.substring("Bearer".length() + 1);
+			tokenServices.revokeToken(tokenId);
+		}
+
 	}
 }
